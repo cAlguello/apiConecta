@@ -140,6 +140,7 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
         Barryvdh\Cors\ServiceProvider::class,
         //
         Illuminate\Auth\AuthServiceProvider::class,
@@ -193,7 +194,9 @@ return [
     */
 
     'aliases' => [
-
+        'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
+        'JWTFactory' => Tymon\JWTAuthFacades\JWTFactory::class,
+        //
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,

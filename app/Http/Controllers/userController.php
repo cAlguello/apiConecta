@@ -11,10 +11,10 @@ class userController extends Controller
     {
         $Usuario = DB::table('usuario')->where('usuario', $user)->first();
         if ($Usuario != null) {
-            return response()->json($Usuario);
+                return response()->json($Usuario);
         } else {
             return null;
         }
     }
-    
+
 }

@@ -14,7 +14,7 @@ class buscadorController extends Controller
             ->join('producto', 'producto_id_producto', '=', 'id_producto')
             ->join('empresa', 'id_empresa', '=', 'empresa_id_empresa_producto')
             ->join('empresa_has_giro','id_empresa','=','empresa_id_empresa')
-            ->join('giro', 'id_giro', '=', 'giro_id_giro')
+            ->join('giro', 'id_giro', '=', 'id_giro_principal_empresa')
             ->join('area_giro', 'id_area_giro', '=', 'area_giro_id_area_giro')
             ->where('nombre_producto',$producto)            
             ->get();
